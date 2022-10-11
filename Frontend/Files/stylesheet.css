@@ -1,0 +1,53 @@
+#first {
+	    	padding: 5px 80px;
+    		margin: 80px auto;
+    		background: #f5f5f5;
+    		border: solid #666;
+    		border-width: 8px 0 2px 0;
+		
+	
+}
+
+p { 		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+ul { 		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+
+}
+
+hr { 		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0;
+ 		margin-bottom: 0;
+		height: 2px;
+		background-color:#666;		
+		opacity: 0.5;
+}
+
+
+h4 {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+h1 {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+h3 {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+#second {
+		text-align: center;
+}
