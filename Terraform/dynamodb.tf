@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "visitor-dynamodb-table" {
 
 
   ttl {
-    attribute_name = "TimeToExist"
+    attribute_name = ""
     enabled        = false
   }
 
