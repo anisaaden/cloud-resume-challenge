@@ -5,5 +5,5 @@ resource "aws_iam_role_policy" "lambda_policy" {
 }
 resource "aws_iam_role" "lambda_role" {
   name               = "lambda_role"
-  assume_role_policy = file("./templates/lambda_assume_role_policy.json")
+  assume_role_policy = file("${path.module}/lambda_assume_role_policy.json")
 }
