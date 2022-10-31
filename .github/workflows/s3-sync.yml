@@ -4,8 +4,6 @@ on:
   push:
     branches:
     - main
-    paths:
-    - cloud-resume-challenge/Files/**
 
 jobs:
   deploy:
