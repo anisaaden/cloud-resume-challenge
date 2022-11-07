@@ -6,7 +6,8 @@
         "Effect": "Allow",
         "Principal": {
          "AWS": [
-            "arn:aws:iam::144243921179:user/terraform"
+            "arn:aws:iam::144243921179:user/terraform",
+            "arn:aws:iam::144243921179:user/admin"
          ]   
         },
         "Action": "kms:*",

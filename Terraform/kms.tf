@@ -3,6 +3,7 @@ resource "aws_kms_key" "domain-dnssec" {
   key_usage = var.key_usage
   deletion_window_in_days = 10
   enable_key_rotation = true
+  is_enabled = true
   policy = file("${path.module}/Templates/kms_key_policy.json")
   tags = var.common_tags
 }
