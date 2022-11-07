@@ -3,6 +3,19 @@ resource "aws_route53_zone" "main" {
   tags = var.common_tags
 }
 
+resource "aws_route53_key_signing_key" "dnssecksk" {
+  name = var.domain_name
+  hosted_zone_id = aws_route53_zone.main.hosted_zone_id
+  key_management_service_arn = aws_kms_key.domain-dnssec.arn
+}
+
+resource "aws_route53_hosted_zone_dnssec" "main" {
+  depends_on = [
+    aws_route53_key_signing_key.dnssecksk
+  ]
+  hosted_zone_id = aws_route53_key_signing_key.dnssecksk.hosted_zone_id
+}
+
 resource "aws_route53_record" "root-a" {
   zone_id = aws_route53_zone.main.zone_id
   name = var.domain_name
