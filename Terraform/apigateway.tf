@@ -11,9 +11,9 @@ resource "aws_apigatewayv2_stage" "dev" {
   name        = "dev"
   auto_deploy = true
 
-   throttle_settings {
-    burst_limit = 10
-    rate_limit  = 10
+  default_route_settings {
+    throttling_burst_limit = 10
+    throttling_rate_limit = 10
   }
 
   access_log_settings {
@@ -35,6 +35,7 @@ resource "aws_apigatewayv2_stage" "dev" {
   }
    tags = var.common_tags
 }
+
 
 resource "aws_cloudwatch_log_group" "record-update_api_gw" {
   name = "/aws/api-gw/${aws_apigatewayv2_api.record-update.name}"
