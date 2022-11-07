@@ -5,7 +5,7 @@ resource "aws_route53_zone" "main" {
 
 resource "aws_route53_key_signing_key" "dnssecksk" {
   name = var.domain_name
-  hosted_zone_id = aws_route53_zone.main.hosted_zone_id
+  hosted_zone_id = aws_route53_zone.main.id
   key_management_service_arn = aws_kms_key.domain-dnssec.arn
 }
 
