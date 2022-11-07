@@ -11,6 +11,11 @@ resource "aws_apigatewayv2_stage" "dev" {
   name        = "dev"
   auto_deploy = true
 
+   throttle_settings {
+    burst_limit = 10
+    rate_limit  = 10
+  }
+
   access_log_settings {
     destination_arn = aws_cloudwatch_log_group.record-update_api_gw.arn
 
@@ -29,27 +34,6 @@ resource "aws_apigatewayv2_stage" "dev" {
     )
   }
    tags = var.common_tags
-}
-
-resource "aws_api_gateway_usage_plan" "api-plan" {
-  name         = "my-usage-plan"
-  description  = "throttling and rate limiting API"
-
-  api_stages {
-    api_id = aws_apigatewayv2_api.record-update.id
-    stage  = aws_apigatewayv2_stage.dev.name
-  }
-
-  quota_settings {
-    limit  = 50
-    offset = 2
-    period = "WEEK"
-  }
-
-  throttle_settings {
-    burst_limit = 10
-    rate_limit  = 10
-  }
 }
 
 resource "aws_cloudwatch_log_group" "record-update_api_gw" {
