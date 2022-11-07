@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "visitor-dynamodb-table" {
-  name           = "MyCRCtable"
+  name           = var.table_name
   billing_mode   = "PROVISIONED"
   read_capacity  = 5
   write_capacity = 5

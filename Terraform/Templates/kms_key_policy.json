@@ -1,0 +1,44 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Enable IAM User Permissions",
+        "Effect": "Allow",
+        "Principal": {
+         "AWS": [
+            "arn:aws:iam::144243921179:user/terraform"
+         ]   
+        },
+        "Action": "kms:*",
+        "Resource": ["*"]   
+      },
+      {
+        "Sid": "Allow Route 53 DNSSEC Service Access",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "dnssec-route53.amazonaws.com"
+        },
+        "Action": [
+            "kms:DescribeKey",
+            "kms:GetPublicKey",
+            "kms:Sign"
+        ],
+        "Resource": ["*"]  
+
+      },
+      {
+        "Sid": "Allow Route 53 DNSSEC Service Access to Grants",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "dnssec-route53.amazonaws.com"
+        },
+        "Action": "kms:CreateGrant",
+        "Resource": ["*"],  
+        "Condition": {
+            "Bool": {
+                "kms:GrantIsForAWSResource": "true"
+            }
+        } 
+      }
+    ]
+  }
