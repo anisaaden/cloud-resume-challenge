@@ -5,7 +5,5 @@ resource "aws_dynamodb_table_item" "visitors" {
   item = <<ITEM
   {
       "record_id": {"S": "visitors"},
-      "visitor_count": {"N": "0"}
+      "visitor_count": {"N": "1"}
   }  
-  ITEM
-}
