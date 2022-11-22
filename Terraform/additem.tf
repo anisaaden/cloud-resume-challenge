@@ -7,4 +7,5 @@ resource "aws_dynamodb_table_item" "visitors" {
       "record_id": {"S": "visitors"},
       "visitor_count": {"N": "0"}
   }  
+  ITEM
 }
