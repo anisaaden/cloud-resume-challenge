@@ -1,4 +1,4 @@
-name: tfsec
+name: Run tfsec
 on:
   push:
     branches:
