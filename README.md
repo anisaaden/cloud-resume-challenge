@@ -1,4 +1,4 @@
-![tfsec badge](https://github.com/anisaaden/cloud-resume-challenge/actions/workflows/tfsec.yml/badge.svg)
+![tfsec workflow status badge](https://github.com/anisaaden/cloud-resume-challenge/actions/workflows/tfsec.yml/badge.svg)
 
 # cloud-resume-challenge
 
