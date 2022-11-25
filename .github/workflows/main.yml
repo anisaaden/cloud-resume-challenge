@@ -2,8 +2,8 @@ name: "Terraform-Main"
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'Terraform/**'
 
 jobs:
   terraform:
