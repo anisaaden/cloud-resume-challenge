@@ -1,3 +1,5 @@
+![tfsec badge](https://github.com/anisaaden/cloud-resume-challenge/actions/workflows/tfsec.yml/badge.svg)
+
 # cloud-resume-challenge
 
 The [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) is a hands-on project designed by [Forrest Brazeal](https://twitter.com/forrestbrazeal) to help newbies bridge the gap from cloud certification to cloud job. It incorporates many of the skills that real cloud and DevOps engineers use in their daily work.
