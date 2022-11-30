@@ -33,6 +33,6 @@ For the CI / CD pipeline, I had to set up Git Actions, I'd never used it before 
 
 ## Security Modifications 
 
-Once I completed the main steps of the challenge, I went back to do some security modificaions including enabled DNSSEC, deploying WAF (I ended up removing this as the costs were quite high and instead set up account level throttling for my API) and running IAM Access Analyser to flag anything I'd over permissioned. 
+Once I completed the main steps of the challenge, I went back to do some security modificaions including enabled DNSSEC, deploying WAF (I ended up removing this as the costs were quite high and instead set up account level throttling for my API) and running IAM Access Analyser to flag anything I'd over permissioned. I also set up Git commit signing and added a new Git Action workflow to run [Tfsec](https://github.com/aquasecurity/tfsec) any time I updated my terraform config files 
 
 And with that I've completed the Cloud Resume Challenge, YAY!
